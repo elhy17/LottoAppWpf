@@ -1,0 +1,82 @@
+﻿<Window x:Class="LottoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Deutsche Lotto 6 aus 49" Height="700" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F0F0">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+      
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,20">
+                <Label Content=" DEUTSCHE LOTTO 6 aus 49 " 
+                       FontSize="24" FontWeight="Bold" 
+                       Foreground="#0064C8"/>
+            </StackPanel>
+
+            <Label x:Name="GuthabenLabel" 
+                   Content="Geld dass du hast : 1.000 €"
+                   FontSize="18" FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Foreground="Green" Margin="0,0,0,10"/>
+
+            <Border BorderBrush="#FFD700" BorderThickness="3" 
+                    CornerRadius="10" Background="#FFFACD"
+                    Margin="20,0,20,10" Padding="15">
+                <StackPanel>
+                    <Label Content=" Aktuelle Gewinnzahlen"
+                           FontSize="16" FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Foreground="#B8860B"/>
+                    <UniformGrid x:Name="GewinnzahlenGrid" Rows="1" Columns="6"
+                                 HorizontalAlignment="Center"
+                                 Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="#C8C8C8" BorderThickness="2" 
+                    CornerRadius="10" Background="White"
+                    Margin="20" Padding="20">
+                <StackPanel>
+     
+                    <Label Content="Wählen Sie 6 Zahlen aus 49:"
+                           FontSize="14" FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+
+                    <UniformGrid x:Name="ZahlenGrid" Rows="7" Columns="7" 
+                                 Margin="0,10,0,20"/>
+
+                    <StackPanel Orientation="Horizontal" 
+                                HorizontalAlignment="Center"
+                                Margin="0,20,0,0">
+                        <Button Content="SPIELEN (300,00 €)" Width="160" Height="50"
+                                FontSize="16" FontWeight="Bold"
+                                Background="#009600" Foreground="White" 
+                                Margin="5" Click="SpielenButton_Click"/>
+                    </StackPanel>
+
+                    <TextBlock x:Name="GeldAnzeige" 
+                               FontSize="16" FontWeight="Bold" 
+                               HorizontalAlignment="Center"
+                               Foreground="Green" Margin="0,20,0,10"
+                               TextWrapping="Wrap" TextAlignment="Center"/>
+
+                    <TextBlock x:Name="Ergebnis" 
+                               FontSize="14" FontWeight="Bold" 
+                               HorizontalAlignment="Center"
+                               Foreground="Red" Margin="0,10,0,10"
+                               TextWrapping="Wrap" TextAlignment="Center"/>
+
+                    <TextBlock x:Name="DeineZahlen" 
+                               FontSize="12" HorizontalAlignment="Center"
+                               Foreground="Blue" Margin="0,5,0,5"
+                               TextWrapping="Wrap" TextAlignment="Center"/>
+
+                    <TextBlock x:Name="Gewinnzahlen" 
+                               FontSize="12" HorizontalAlignment="Center"
+                               Foreground="Green" Margin="0,5,0,10"
+                               TextWrapping="Wrap" TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
